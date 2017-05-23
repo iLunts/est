@@ -7,18 +7,22 @@
     <title>Document</title>
 
     <!-- Styles -->
-    <style src="content/css/min/style.min.css"></style>
+    <link rel="stylesheet" type="text/css" href="content/css/min/style.min.css">
 
 </head>
 <body>
     
+    <!--Aside menu-->
+    <aside data-ng-include="'view/ui/aside/index.html'"></aside>
+
     <!-- Main view -->
-    <main data-ng-view></main>
+    <main class="main" data-ng-view></main>
 
     <!-- Scripts -->
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
-    <script src="scripts/app.js"></script>
+    <script src="content/js/app.min.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 var app = angular.module('site', [
     'ngRoute', 
-    // 'ui.bootstrap', 
+    'ui.bootstrap', 
     // 'hljs', 
     // 'ngclipboard',
     // 'duScroll',
