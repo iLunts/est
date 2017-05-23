@@ -1,0 +1,119 @@
+// out: ../../../content/css/components/input.css, compress: true
+@import 'variables.less';
+// Name:            Input
+// Description:     Defines styles for input
+//
+// Component:       `input`
+//
+// Modifiers:       `input--tags*`
+//                  `input--search`
+//                  `input--select`
+//                  `input--*`
+//
+// -----------------------------------------------------------------
+.input {
+    position: relative;
+    width: 100%;
+    padding: @input-padding;
+    color: @input-text-color;
+    background: @input-background;
+    border: none;
+    border: 1px solid @input-border-color;
+    margin-bottom: @input-margin;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 200ms;
+
+    // -----------------------------------------------------------
+    // All modificators
+    // -----------------------------------------------------------
+
+    // Modificator '.input.input--sm'
+    &&--sm{
+        padding: (@input-padding / 2);
+    }
+
+    // Modificator '.input.input--md'
+    &&--md{
+        padding: (@input-padding * 1.5);
+    }
+
+    // Modificator '.input.input--lg'
+    &&--lg{
+        padding: (@input-padding * 2);
+    }
+
+    // -----------------------------------------------------------
+    // All elements
+    // -----------------------------------------------------------
+}
+
+// -----------------------------------------------------------------
+// Block '.label'
+// -----------------------------------------------------------------
+.label{
+    display: block;
+    width: 100%;
+    margin: @label-margin 0 0 0;
+    font-size: @label-font-size;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9b9b9b;
+
+    // -----------------------------------------------------------
+    // All modificators
+    // -----------------------------------------------------------
+
+    // -----------------------------------------------------------
+    // All elements
+    // -----------------------------------------------------------
+}
+
+// -----------------------------------------------------------------
+// Block '.input-group'
+// -----------------------------------------------------------------
+
+.input-group{
+    position: relative;
+
+    // -----------------------------------------------------------
+    // All modificators
+    // -----------------------------------------------------------
+
+
+    // -----------------------------------------------------------
+    // All elements
+    // -----------------------------------------------------------
+
+    // Element '.input-group .input-group__field'
+    & &__field{
+        margin: 0;
+    }
+
+    // Element '.input-group .input-group__icon'
+    &__icon{
+        position: absolute;
+        left: 3px;
+        top: 50%;
+        color: @color-green;
+        z-index: 1;
+
+        // Element '.input-group .input-group__icon.icon--sm'
+        &.icon--sm{
+            margin-top: -(@icon-height-sm / 2);
+
+            // Element '.input-group .input-group__icon.icon--sm + .input-group__input'
+            & + .input-group__input{
+                padding-right: @icon-height-sm + 2;
+            }
+        }
+
+        // Element '.input-group .input__icon--right'
+        &--right{
+            left: auto;
+            right: 3px;
+        }
+    }
+}

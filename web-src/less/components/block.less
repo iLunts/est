@@ -1,0 +1,71 @@
+// out: ../../../content/css/components/block.css, compress: true
+@import 'variables.less';
+// Name:            Block
+// Description:     Defines styles to create horizontal layout blocks
+//
+// Component:       `block`
+//
+// Modifiers:       `list-line`
+//                  `list-striped`
+//                  `list-space`
+//
+// --------------------------------------------------------------
+// Block '.block'
+// --------------------------------------------------------------
+.block {
+    position: relative;
+    box-sizing: border-box;
+    padding: @block-padding-vertical 0;
+
+    // -----------------------------------------
+    // All modificators
+    // -----------------------------------------
+
+    // Modificator '.block.block--lg'
+    &&--sm{
+        padding: @block-padding-vertical-sm 0;
+    }
+
+    // Modificator '.block.block--md'
+    &&--md{
+        padding: @block-padding-vertical-md 0;
+    }
+
+    // Modificator '.block.block--lg'
+    &&--lg {
+        padding: @block-padding-vertical-lg 0;
+    }
+
+    // Modificator '.block.block--gray'
+    &&--gray{
+        background-color: @block-background-gray;
+    }
+
+    // -----------------------------------------
+    // All elements
+    // -----------------------------------------
+
+    // Element '.block .block__prefix'
+    & &__prefix{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        color: #fff;
+        font-size: 12rem;
+        text-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
+        z-index: 0;
+        text-align: center;
+        margin: 0;
+        line-height: 1;
+
+        // Element '.block .block__prefix + .block__content'
+        & + .block__content{
+            margin-top: 90px;
+        }    
+    }
+
+    // Element '.block .block__content'
+    & &__content{
+        position: relative;
+    }    
+}

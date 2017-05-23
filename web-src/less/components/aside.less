@@ -1,0 +1,85 @@
+// out: ../../../content/css/components/aside.css, compress: true
+@import 'variables.less';
+// Name:            aside
+// Description:     Defines styles to create layouts with aside
+//
+// Component:       '.aside__*'
+//                  '.aside__*'
+//
+// -------------------------------------------------
+// Block '.aside'
+// -------------------------------------------------
+.aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: @aside-width;
+    padding: 20px 0 0 0;
+    background: #f5f5f5;
+    color: #969696;
+    font-weight: 500;
+    box-shadow: inset 0 0 80px -30px rgba(0, 0, 0, 0.4);
+
+    // -------------------------------------------------
+    // All modificators
+    // -------------------------------------------------
+
+
+    // -------------------------------------------------
+    // All elements
+    // -------------------------------------------------
+
+    // Element '.aside .aside__list'
+    & &__list{
+
+    }
+
+    // Element '.aside .aside__item'
+    & &__item{
+        
+    }
+
+    // Element '.aside .aside__search'
+    & &__search{
+        padding: 0 15px;
+        margin-bottom: 20px;
+
+        // Element '.aside .aside__search .input'
+        & .input{
+            border-radius: 100px;
+            padding-left: (@input-padding * 3);
+            border-width: 2px;
+        }    
+    }    
+
+    // Element '.aside .aside__link'
+    & &__link{
+        display: block;
+        padding: 0 10px;
+        line-height: 2rem;
+        transition: 250ms;
+
+        // Element '.aside .aside__link:hover'
+        &:hover{
+            background: #e6e6e6;
+            color: #171717;
+        }
+    }
+
+    // Element '.aside .aside__parent'
+    & &__parent{
+        display: none;
+        transition: all 250ms;
+
+        // State '.aside .aside__parent.open'
+        &.open{
+            display: block;
+        }    
+
+        // Element '.aside .aside__parent .aside__link'
+        & .aside__link{
+            padding: 0 20px;
+        }
+    }
+}

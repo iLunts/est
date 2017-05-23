@@ -1,0 +1,18 @@
+{
+  "name": "Empty project",
+  "authors": [
+    "Roman Luntsevich <shipik2008@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
