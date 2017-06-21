@@ -1,6 +1,7 @@
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Roboto, sans-serif;
   color: #323846;
+  font-weight: 300;
 }
 body {
   background: #f4f8f9;

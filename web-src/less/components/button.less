@@ -34,7 +34,7 @@
     text-transform: none;
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 @button-padding-horizontal;
+    padding: 4px @button-padding-horizontal;
     background: @button-background;
     vertical-align: middle;
     line-height: @button-line-height;
@@ -43,8 +43,13 @@
     text-decoration: none;
     text-align: center;
     border-radius: @button-border-radius;
-    font-weight: 500;
+    font-weight: 400;
     transition: all 250ms;
+
+    &:hover{
+        background: @button-hover-background;
+        color: @button-hover-color;
+    }
 
     // ---------------------------------------------------------
     // All modificators
