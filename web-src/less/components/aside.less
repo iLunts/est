@@ -17,7 +17,6 @@
     width: @aside-width;
     padding: 0;
     background: #fff;
-    color: #fff;
     font-weight: 500;
     box-shadow: 10px 0px 40px 0 rgba(0, 0, 0, 0.1);
 
@@ -32,11 +31,14 @@
 
     // Element '.aside .aside__header'
     & &__header{
-        color: #95a8b2;
-        font-size: 1.5rem;
-        text-align: center;
-        display: block;
-        padding: 10px 0;
+
+        &-link{
+            color: #95a8b2;
+            font-size: 1.5rem;
+            text-align: center;
+            display: block;
+            padding: 10px 0;
+        }
     }
 
     // Element '.aside .aside__menu'
@@ -75,6 +77,9 @@
         &-text{
             display: block;
             font-size: 0.6rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 4px;
         }
     }
 
