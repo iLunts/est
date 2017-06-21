@@ -10,7 +10,8 @@ var browserSync = require('browser-sync').create();
 
 // var install = require("gulp-install");
 
-gulp.task('default', ['scripts', 'less', 'minify-css'], function() {});
+// gulp.task('default', ['scripts', 'less', 'minify-css'], function() {});
+gulp.task('default', ['scripts', 'minify-css'], function() {});
 
 gulp.task('scripts', function() {
   return gulp.src(['web-src/js/*.js', 'view/**/*.js'])
@@ -48,7 +49,9 @@ gulp.task('clean-style', function () {
 gulp.task('server', ['default'], function() {
 
     browserSync.init({
-        server: "./",
+        server: {
+            baseDir: "./"
+        },
         notify: false
     });
 
