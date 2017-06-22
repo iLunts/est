@@ -36,36 +36,14 @@
         padding: @block-padding-vertical-lg 0;
     }
 
-    // Modificator '.block.block--gray'
-    &&--gray{
-        background-color: @block-background-gray;
+    // Modificator '.block.block--filter'
+    &&--filter {
+        padding: @block-padding-vertical-sm 0;
+        border-bottom: 1px solid #ddd;
     }
 
     // -----------------------------------------
     // All elements
     // -----------------------------------------
 
-    // Element '.block .block__prefix'
-    & &__prefix{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        color: #fff;
-        font-size: 12rem;
-        text-shadow: 0 20px 30px rgba(0, 0, 0, 0.07);
-        z-index: 0;
-        text-align: center;
-        margin: 0;
-        line-height: 1;
-
-        // Element '.block .block__prefix + .block__content'
-        & + .block__content{
-            margin-top: 90px;
-        }    
-    }
-
-    // Element '.block .block__content'
-    & &__content{
-        position: relative;
-    }    
 }

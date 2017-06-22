@@ -19,16 +19,89 @@
     background: #fff;
     font-weight: 500;
     box-shadow: 10px 0px 40px 0 rgba(0, 0, 0, 0.1);
+    z-index: 10;
 
     // -------------------------------------------------
     // All modificators
     // -------------------------------------------------
 
+    // Modificator '.aside.aside--wide'
+    &&--wide{
+        width: @aside-wide-width;
+        background: #2c3136;
+        box-shadow: none;
+        color: #90a4ae;
+        left: -@aside-wide-width;
+        transform: all 300ms;
+
+        .open &{
+            box-shadow: 10px 0px 40px 0 rgba(0, 0, 0, 0.3);
+            left: 0;
+        }
+
+        .aside__menu{
+
+            &-item{
+                padding-left: 10px;
+
+                &:hover{
+                    background-color: #33383e;
+                }
+                
+                &.active{
+                    border-color: #1784c7;
+
+                    .aside__menu-icon{
+                        color: #808080;
+                    }    
+                }
+            }
+
+            &-link{
+                text-align: left;
+                color: #ccc;
+            }
+
+            &-icon{
+                color: #808080;
+                font-size: 1rem;
+            }
+
+            &-text{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                font-size: 0.8rem;
+                line-height: 1rem;
+                font-weight: 300;
+                margin-left: 5px;
+            }
+
+        }
+    }
 
     // -------------------------------------------------
     // All elements
     // -------------------------------------------------
 
+    // Element '.aside .aside__back'
+    & &__back{
+        border-bottom: 1px dashed #3e444a;
+
+        &-link{
+            color: #95a8b2;
+            font-size: 1rem;
+            text-align: left;
+            display: block;
+            padding: 15px 20px;
+        }
+
+        &-text{
+            vertical-align: middle;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+    }
     // Element '.aside .aside__header'
     & &__header{
 
@@ -58,9 +131,13 @@
             }
 
             &.active{
-                background-color: rgba(3, 169, 244, 0.1);
+                // background-color: rgba(3, 169, 244, 0.1);
                 border-color: rgb(3, 169, 244);
                 color: #647a88;
+
+                .aside__menu-icon{
+                    color: #03a9f4;
+                }
             }
         }
 
