@@ -8,11 +8,8 @@ app.config(["$routeProvider", function ($routeProvider) {
 
 app.controller('rentFlatCtrl', function($scope){
 
+    $scope.outputBrowsers;
     $scope.webBrowsersGrouped = [
-        {
-            name: '<strong>All Browsers</strong>',
-            msGroup: true
-        },
         {
             name: '<strong>Modern Web Browsers</strong>',
             msGroup: true
@@ -71,9 +68,6 @@ app.controller('rentFlatCtrl', function($scope){
             name: 'WorldWideWeb Nexus',
             maker: '(Tim Berners-Lee)',
             ticked: false
-        },
-        {
-            msGroup: false
         },
         {
             msGroup: false
