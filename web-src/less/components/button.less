@@ -214,7 +214,11 @@
 
     // Elements '.btn + .btn'
     & + .btn{
-        margin-left: 5px;
+        margin-left: 6px;
+    }
+
+    & + .btn-group{
+        margin-left: 6px;
     }
 
     &:not(:disabled) {
@@ -246,14 +250,11 @@
 // BLock '.btn-group'
 // --------------------------------------------------------
 .btn-group {
-    width: 100%;
-    margin: 0;
-    display: inline-block;
-    vertical-align: middle;
     position: relative;
-    font-size: 0.001px;
-    white-space: nowrap;
-
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    
     // ---------------------------------------------------------
     // All modificator
     // ---------------------------------------------------------
@@ -263,15 +264,19 @@
     // All elements
     // ---------------------------------------------------------
 
-    // Element '.btn-group > *'
-    & > * {
-        display: inline-block;
+    // Element '.btn-group + .btn'
+    & + .btn{
+        margin-left: 6px;        
     }
 
     // Element '.btn-group > .btn'
     & .btn{
         vertical-align: top;
-        padding: 0 (@btn-padding-horizontal * 1.5);
+
+        &--arrow{
+            padding-left: 4px;
+            padding-right: 4px;
+        }
     }
 
     // Element '.btn-group > .btn:first-child'
@@ -294,7 +299,7 @@
     // Element '.btn-group > .btn:nth-child(n+2) .btn'
     & > .btn:nth-child(n+2),
     & > div:nth-child(n+2) .btn {
-        margin-left: -1px;
+        margin-left: -3px;
     }
 }
 
