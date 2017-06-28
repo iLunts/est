@@ -1,12 +1,1 @@
-.header {
-  margin: 10px 0 15px 0;
-}
-.header .header__title {
-  color: #2196f3;
-  margin: 0;
-  font-weight: 400;
-  line-height: 38px;
-}
-.header .header__button {
-  float: right;
-}
+.header{margin:10px 0 15px 0}.header .header__title{color:#2196f3;margin:0;font-weight:400;line-height:38px}.header .header__btn{float:right}

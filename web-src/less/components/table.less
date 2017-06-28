@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+    display: table;
 
     // -----------------------------------------
     // All modificators
@@ -27,8 +28,9 @@
     // All elements
     // -----------------------------------------
 
-    // Element '.table th'
-    & th{
+    // Element '.table .th'
+    & .th{
+        display: table-cell;
         padding: 10px 8px;
         text-align: left;
         font-weight: 500;
@@ -37,17 +39,28 @@
         color: #78909c;
     }
 
-    // Element '.table tbody'
-    & tbody{
-
-        & tr{
-            width: 100%;
-            background: #fff;
-        }
+    // Element '.table .td'
+    & .td{
+        display: table-cell;
+        padding: 10px 8px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #78909c;
     }
 
-    & &__content{
+    & .tr{
+        display: table-row;
         width: 100%;
     }
 
+    // Element '.table tbody'
+    & .tbody{
+
+        .tr{
+            background: #fff;
+        }
+        
+    }
 }
