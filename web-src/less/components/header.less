@@ -22,10 +22,33 @@
 
     // Element '.header .header__title'
     & &__title{
-        color: @color-blue;
         margin: 0;
-        font-weight: 400;
         line-height: 38px;
+
+        &-text{
+            position: relative;
+            color: #bbb;
+            font-size: 1.2rem;
+            font-weight: 100;
+
+            & + .header__title-text{
+                margin-left: 8px;
+                padding-left: 8px;
+
+                &:before{
+                    content: '/';
+                    position: absolute;
+                    left: -7px;
+                    top: -3px;
+                    color: #ddd;
+                }
+            }
+
+            &.active{
+                color: @color-blue;
+                font-weight: 400;
+            }
+        }
     }
 
     // Element '.header .header__btn'
