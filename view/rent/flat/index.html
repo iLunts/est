@@ -25,9 +25,14 @@
                             <span class="btn__text">Печать</span>
                             <i class="btn__icon icon-print"></i>
                         </button>
-                        <button class="btn btn--arrow">
-                            <i class="btn__icon icon-keyboard_arrow_down"></i>
-                        </button>
+                        <div uib-dropdown auto-close="outsideClick">
+                            <button class="btn btn--arrow" uib-dropdown-toggle>
+                                <i class="btn__icon icon-keyboard_arrow_down"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu--right" uib-dropdown-menu role="menu">
+                                <a href="" class="link">123</a>
+                            </div>
+                        </div>
                     </div>
                     <button class="btn">
                         <span class="btn__text">Письмо</span>
@@ -48,12 +53,11 @@
             <div class="tr">
                 <div class="th" uib-dropdown auto-close="outsideClick">
                     <a href="" class="btn btn--sm t--bold" uib-dropdown-toggle>+</a>
-                    <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <div class="dropdown-menu" uib-dropdown-menu role="menu">
                         <div class="checkbox checkbox--sm" role="menuitem" data-ng-repeat="item in params">
                             <input class="checkbox__input" type="checkbox" id="{{$index}}" name="{{$index}}" data-ng-checked="item.check" data-ng-model="$index">
                             <label for="{{$index}}" class="checkbox__label">{{item.name}}</label>
                         </div>
-
                     </div>
                 </div>
                 <div class="th" data-ng-repeat="item in params" data-ng-bind="item.socr"></div>
