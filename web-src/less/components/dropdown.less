@@ -40,6 +40,24 @@
         border-radius: 0;
         box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
+        &:before{
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 10px;
+            border: 6px solid transparent;
+            border-bottom-color: #d4d4d4;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: 10px;
+            border: 6px solid transparent;
+            border-bottom-color: #fff;
+        }
+
         .open > &{
             display: block;
         }
