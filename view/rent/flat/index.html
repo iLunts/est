@@ -46,27 +46,52 @@
     <div class="table">
         <div class="thead">
             <div class="tr">
-                <div class="th" uib-dropdown>
-                    <a href="" class="btn btn--mini" uib-dropdown-toggle>+</a>
+                <div class="th" uib-dropdown auto-close="outsideClick">
+                    <a href="" class="btn btn--sm t--bold" uib-dropdown-toggle>+</a>
                     <div class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-                        <div class="checkbox checkbox--sm" role="menuitem">
-                            <input class="checkbox__input" type="checkbox" id="td_field" name="td_field">
-                            <label for="td_field" class="checkbox__label">Название поля</label>
+                        <div class="checkbox checkbox--sm" role="menuitem" data-ng-repeat="item in params">
+                            <input class="checkbox__input" type="checkbox" id="{{$index}}" name="{{$index}}" data-ng-checked="item.check" data-ng-model="$index">
+                            <label for="{{$index}}" class="checkbox__label">{{item.name}}</label>
                         </div>
+
                     </div>
                 </div>
-                <div class="th">1</div>
-                <div class="th">1</div>
-                <div class="th">1</div>
-                <div class="th">1</div>
-                <div class="th">1</div>
-                <div class="th">1</div>
-                <div class="th">1</div>
+                <div class="th" data-ng-repeat="item in params" data-ng-bind="item.socr"></div>
+                <!--<div class="th">Об/Раз</div>
+                <div class="th">Улица</div>
+                <div class="th">Дом</div>
+                <div class="th">Кор</div>
+                <div class="th">Этаж</div>
+                <div class="th">Мебель</div>
+                <div class="th">Хол</div>
+                <div class="th">С/м</div>
+                <div class="th">Тел</div>
+                <div class="th">ТВ</div>
+                <div class="th">Пред.</div>
+                <div class="th">Срок</div>
+                <div class="th">Примечание</div>
+                <div class="th">-</div>
+                <div class="th">-</div>
+                <div class="th">Змт</div>
+                <div class="th">Ответств.</div>
+                <div class="th">Телефоны</div>
+                <div class="th">Изменен</div>
+                <div class="th">Добавлен</div>
+                <div class="th">Статус</div>
+                <div class="th">-</div>
+                <div class="th">-</div>
+                <div class="th">-</div>
+                <div class="th">ID</div>-->
             </div>
         </div>
         <div class="tbody">
             <div class="tr">
-                <div class="td">2</div>
+                <div class="td">
+                    <div class="checkbox checkbox--empty checkbox--sm" role="menuitem">
+                        <input class="checkbox__input" type="checkbox" id="field-table-1" name="field-table-1">
+                        <label for="field-table-1" class="checkbox__label"></label>
+                    </div>
+                </div>
                 <div class="td">2</div>
                 <div class="td">2</div>
                 <div class="td">2</div>
@@ -79,7 +104,12 @@
                 <div class="td">2</div>
             </div>
             <div class="tr">
-                <div class="td">2</div>
+                <div class="td">
+                    <div class="checkbox checkbox--empty checkbox--sm" role="menuitem">
+                        <input class="checkbox__input" type="checkbox" id="field-table-2" name="field-table-2">
+                        <label for="field-table-2" class="checkbox__label"></label>
+                    </div>
+                </div>
                 <div class="td">2</div>
                 <div class="td">2</div>
                 <div class="td">2</div>
