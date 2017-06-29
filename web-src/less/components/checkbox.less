@@ -1,0 +1,153 @@
+// out: ../../../content/css/components/checkbox.css, compress: true
+@import 'variables.less';
+// Name:            checkbox
+// Description:     Defines styles to create layouts with checkbox
+//
+//
+// Component:       `.checkbox__*`
+// ----------------------------------------------------
+// Block '.checkbox'
+// ----------------------------------------------------
+.checkbox {
+    margin: 10px 0;
+
+    & + &{
+        margin-top: 20px;
+    }
+
+    // --------------------------------------------------
+    // All modificators
+    // --------------------------------------------------
+
+    // Modificator '.checkbox.checkbox--empty'
+    &&--empty{
+        
+        & .checkbox__label{
+            padding-left: 22px;
+        }
+    }
+    
+    // Modificator '.checkbox.checkbox--green'
+    &&--green{
+
+        // Element '.checkbox.checkbox--green .checkbox__input'
+        & .checkbox__input{
+
+            &:checked{
+
+                & + .checkbox__label{
+                    
+                    &:before{
+                        background: #1d997c;
+                        border-color: #1d997c;
+                    }
+                }
+            }
+        }
+
+        // Element '.checkbox.checkbox--green .checkbox__label'
+        & .checkbox__label{
+            color: #fff;
+
+            &:before{
+                border: 1px solid #1d997c;
+                background-color: #0eb08a;
+            }
+        }
+    }
+    
+    // --------------------------------------------------
+    // All elements
+    // --------------------------------------------------
+
+    // ELement '.checkbox .checkbox__input'
+    & &__input{
+        display: none;
+        opacity: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        
+        // State '.checkbox .checkbox__input:checked'
+        &:checked {
+
+            & + .checkbox__label {
+
+                &:before {
+                    content: "\e928";
+                    border: 1px solid @color-green;            
+                    background: @color-green;
+                    font-family: @font-icon;
+                    color: #fff;
+                    font-size: @checkbox-font-size;
+                    line-height: @checkbox-line-height - 2;
+                    text-align: center;
+                }
+            }
+        }
+
+        &[type='radio']{
+
+            &:checked{
+                
+                & + .checkbox__label{
+                    &:before{
+                        content: '';           
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        left: 7px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 30px;
+                        background: #fff;
+                    }
+                }
+            }
+
+            & + .checkbox__label{
+                &:before{
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+
+    // Element '.checkbox + .checkbox__label'
+    & &__label{
+        position: relative;
+        display: block;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        overflow: visible;
+        padding-left: 30px;
+        line-height: @checkbox-line-height;
+        transform: none;
+        top: 0 !important;        
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            // top: -(@checkbox-height / 2);
+            top: 0;
+            width: @checkbox-height;
+            height: @checkbox-height;
+            border: 1px solid #ccc;
+            background-color: #f6f6f6;
+            border-radius: 0;
+        }
+
+        // &:not(:empty){
+        //     display: inline;
+        //     padding-left: (@checkbox-height * 1.5);
+
+        //     &:before{
+        //         top: 0;
+        //     }
+        // }
+    }
+
+}

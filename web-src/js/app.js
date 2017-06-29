@@ -3,7 +3,7 @@
 var app = angular.module('site', [
     'ngRoute', 
     'isteven-multi-select',
-    // 'ui.bootstrap',
+    'ui.bootstrap',
     // 'hljs', 
     // 'ngclipboard',
     // 'duScroll',
