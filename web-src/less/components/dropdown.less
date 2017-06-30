@@ -36,10 +36,21 @@
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #d4d4d4;
-        // border: 1px solid rgba(0,0,0,.15);
         border-radius: 0;
         box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
+        // Modificator '.dropdown-menu.dropdown-menu--md'
+        &.dropdown-menu--md{
+            min-width: 320px;
+            max-width: 340px;
+        }
+
+        // Modificator '.dropdown-menu.dropdown-menu--lg'
+        &.dropdown-menu--lg{
+            min-width: 480px;
+        }
+
+        // Modificator '.dropdown-menu.dropdown-menu--right'
         &.dropdown-menu--right{
             left: auto;
             right: 0;

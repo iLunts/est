@@ -41,14 +41,14 @@
     <!--<link rel="stylesheet" type="text/css" href="/content/css/min/style.min.css">-->
 
 </head>
-<body>
+<body data-ng-controller="mainCtrl">
 
     <!--Top-menu-->
     <nav data-ng-include="'view/ui/top-menu/index.html'"></nav>
     
     <!--Aside menu-->
     <aside data-ng-include="'view/ui/aside/index.html'"></aside>
-    <aside class="open1" data-ng-include="'view/ui/aside/submenu.html'"></aside>
+    <aside class="open1" data-ng-class="{'open' : showSettings}" data-ng-include="'view/ui/aside/submenu.html'"></aside>
 
     <!-- Main view -->
     <main class="main" data-ng-view></main>

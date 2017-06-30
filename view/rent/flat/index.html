@@ -74,10 +74,20 @@
             <div class="tr tr--thead">
                 <div class="th t--c" uib-dropdown dropdown-append-to-body auto-close="outsideClick">
                     <a href="" class="btn btn--sm t--bold" uib-dropdown-toggle>+</a>
-                    <div class="dropdown-menu" uib-dropdown-menu role="menu">
-                        <div class="checkbox checkbox--sm" role="menuitem" data-ng-repeat="item in params">
-                            <input class="checkbox__input" type="checkbox" id="{{$index}}" name="{{$index}}" data-ng-checked="item.check" data-ng-model="$index">
-                            <label for="{{$index}}" class="checkbox__label">{{item.name}}</label>
+                    <div class="dropdown-menu dropdown-menu--md" uib-dropdown-menu role="menu">
+                        <div class="grid">
+                            <div class="col--1-2" role="menuitem" data-ng-repeat="item in params">
+                                <div class="checkbox checkbox--sm m--b-sm">
+                                    <input class="checkbox__input" type="checkbox" id="{{$index}}" name="{{$index}}" data-ng-checked="item.check" data-ng-model="$index">
+                                    <label for="{{$index}}" class="checkbox__label">{{item.name}}</label>
+                                </div>
+                            </div>
+                            <div class="col--1-1">
+                                <hr class="m--b-sm">
+                            </div>
+                            <p class="col--1-1">
+                                <a href="" class="btn btn--sm btn--blue col--1-1">Сбросить все...</a>
+                            </p>
                         </div>
                     </div>
                 </div>
