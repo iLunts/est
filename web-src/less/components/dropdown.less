@@ -40,6 +40,21 @@
         border-radius: 0;
         box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
+        &.dropdown-menu--right{
+            left: auto;
+            right: 0;
+            
+            &:before{
+                left: auto;
+                right: 10px;
+            }
+
+            &:after{
+                left: auto;
+                right: 10px;
+            }
+        }
+
         &:before{
             content: '';
             position: absolute;

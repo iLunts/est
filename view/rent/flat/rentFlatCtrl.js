@@ -1,12 +1,11 @@
 app.config(["$routeProvider", function ($routeProvider) {
-        $routeProvider.when("/rent/flat", {
-            templateUrl: "view/rent/flat/index.html",
-            controller: "rentFlatCtrl"
-        });
-    }
-]);
+    $routeProvider.when("/rent/flat", {
+        templateUrl: "view/rent/flat/index.html",
+        controller: "rentFlatCtrl"
+    });
+}]);
 
-app.controller('rentFlatCtrl', function($scope){
+app.controller('rentFlatCtrl', function ($scope) {
 
     // $scope.outputBrowsers;
     // $scope.webBrowsersGrouped = [
@@ -78,33 +77,218 @@ app.controller('rentFlatCtrl', function($scope){
 
 
 
-    $scope.params = [
-        {name: 'Цена', socr: 'Цена', check: true},
-        {name: 'Об / Раз', socr: 'Об/Раз', check: false},
-        {name: 'Улица', socr: 'Улица', check: false},
-        {name: 'Дом', socr: 'Дом', check: false},
-        {name: 'Корпус', socr: 'Кор', check: false},
-        {name: 'Этаж', socr: 'Этаж', check: false},
-        {name: 'Мебель', socr: 'Мебель', check: false},
-        {name: 'Холодильник', socr: 'Хол', check: false},
-        {name: 'С/м', socr: 'С/м', check: false},
-        {name: 'Телефон', socr: 'Тел', check: false},
-        {name: 'Телевизор', socr: 'ТВ', check: false},
-        {name: 'Предложения', socr: 'Пред.', check: false},
-        {name: 'Срок аренды', socr: 'Срок', check: false},
-        {name: 'Примечание', socr: 'Примечание', check: false},
-        {name: '-', socr: '-', check: false},
-        {name: '-', socr: '-', check: false},
-        {name: 'Заметки', socr: 'Змт', check: false},
-        {name: 'Ответственный', socr: 'Ответств', check: false},
-        {name: 'Телефоны', socr: 'Телефоны', check: false},
-        {name: 'Дата измененения', socr: 'Изменен', check: false},
-        {name: 'Дата добавления', socr: 'Добавлен', check: false},
-        {name: 'Статус', socr: 'Статус', check: false},
-        {name: '-', socr: '-', check: false},
-        {name: '-', socr: '-', check: false},
-        {name: '-', socr: '-', check: false},
-        {name: 'Уникальный ID', socr: 'ID', check: false}
+    $scope.params = [{
+            name: 'Цена',
+            socr: 'Цена',
+            check: true
+        },
+        {
+            name: 'Об / Раз',
+            socr: 'Об/Раз',
+            check: false
+        },
+        {
+            name: 'Улица',
+            socr: 'Улица',
+            check: false
+        },
+        {
+            name: 'Дом',
+            socr: 'Дом',
+            check: true
+        },
+        {
+            name: 'Корпус',
+            socr: 'Кор',
+            check: true
+        },
+        {
+            name: 'Этаж',
+            socr: 'Этаж',
+            check: true
+        },
+        {
+            name: 'Мебель',
+            socr: 'Мебель',
+            check: false
+        },
+        {
+            name: 'Холодильник',
+            socr: 'Хол',
+            check: true
+        },
+        {
+            name: 'С/м',
+            socr: 'С/м',
+            check: true
+        },
+        {
+            name: 'Телефон',
+            socr: 'Тел',
+            check: true
+        },
+        {
+            name: 'Телевизор',
+            socr: 'ТВ',
+            check: false
+        },
+        {
+            name: 'Предложения',
+            socr: 'Пред.',
+            check: false
+        },
+        {
+            name: 'Срок аренды',
+            socr: 'Срок',
+            check: true
+        },
+        {
+            name: 'Примечание',
+            socr: 'Примечание',
+            check: true
+        },
+        {
+            name: '-',
+            socr: '-',
+            check: true
+        },
+        {
+            name: '-',
+            socr: '-',
+            check: false
+        },
+        {
+            name: 'Заметки',
+            socr: 'Змт',
+            check: false
+        },
+        {
+            name: 'Ответственный',
+            socr: 'Ответств',
+            check: false
+        },
+        {
+            name: 'Телефоны',
+            socr: 'Телефоны',
+            check: true
+        },
+        {
+            name: 'Дата измененения',
+            socr: 'Изменен',
+            check: false
+        },
+        {
+            name: 'Дата добавления',
+            socr: 'Добавлен',
+            check: false
+        },
+        {
+            name: 'Статус',
+            socr: 'Статус',
+            check: false
+        },
+        {
+            name: '-',
+            socr: '-',
+            check: false
+        },
+        {
+            name: '-',
+            socr: '-',
+            check: false
+        },
+        {
+            name: '-',
+            socr: '-',
+            check: false
+        },
+        {
+            name: 'Уникальный ID',
+            socr: 'ID',
+            check: false
+        }
+    ];
+
+    $scope.rooms = [
+        {   
+            check: false,
+            price: '123',
+            currecny: '$',
+            street: 'Плеханова',
+            house_number: '23',
+            room_number: '2',
+            home_block: '1',
+            floor: '3',
+            floor_max: '12',
+            furniture: '+',
+            refrigerator: true,
+            s_m: '+',
+            cell: true,
+            tv: true,
+            proposal: 'fgdf gdfgdf df',
+            rent_time: '1 мес.',
+            description: 'dsf sdf sdfsdfsdfsdf',
+            note: '',
+            assigner: '',
+            phones: '',
+            change: '',
+            added: '',
+            status: '',
+            id: '1'
+        },
+        {
+            check: true,
+            price: '123',
+            currecny: '$',
+            street: 'ул. Плеханова',
+            house_number: '23',
+            room_number: '2',
+            home_block: '1',
+            floor: '3',
+            floor_max: '12',
+            furniture: '+',
+            refrigerator: true,
+            s_m: '+',
+            cell: true,
+            tv: true,
+            proposal: 'fgdf gdfgdf df',
+            rent_time: '1 мес.',
+            description: 'dsf sdf sdfsdfsdfsdf',
+            note: '',
+            assigner: '',
+            phones: '',
+            change: '',
+            added: '',
+            status: '',
+            id: '2'
+        },
+        {
+            check: false,
+            price: '123',
+            currecny: '$',
+            street: 'ул. Плеханова',
+            house_number: '23',
+            room_number: '2',
+            home_block: '1',
+            floor: '3',
+            floor_max: '12',
+            furniture: '+',
+            refrigerator: true,
+            s_m: '+',
+            cell: true,
+            tv: true,
+            proposal: 'fgdf gdfgdf df',
+            rent_time: '1 мес.',
+            description: 'dsf sdf sdfsdfsdfsdf',
+            note: '',
+            assigner: '',
+            phones: '',
+            change: '',
+            added: '',
+            status: '',
+            id: '3'
+        },
+    
     ];
 
 });

@@ -6,8 +6,8 @@
         <div class="grid">
             <div class="col--3-10">
                 <h2 class="header__title">
-                    <a href="" class="link link--dashed header__title-text">Аренда</a>
-                    <!--<span>/</span>-->
+                    <a href="/" class="link link--dashed header__title-text">Главная</a>
+                    <a href="/" class="link link--dashed header__title-text">Аренда</a>
                     <span class="header__title-text active">Аренда квартир</span>
                 </h2>
             </div>
@@ -30,7 +30,11 @@
                                 <i class="btn__icon icon-keyboard_arrow_down"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu--right" uib-dropdown-menu role="menu">
-                                <a href="" class="link">123</a>
+                                <div class="dropdown-menu__list">
+                                    <a href="" class="dropdown-menu__list-item">Печать выбранных</a>
+                                    <a href="" class="dropdown-menu__list-item">Печатать всё</a>
+                                    <a href="" class="dropdown-menu__list-item">Сохранить PDF</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,69 +65,26 @@
                     </div>
                 </div>
                 <div class="th" data-ng-repeat="item in params" data-ng-bind="item.socr"></div>
-                <!--<div class="th">Об/Раз</div>
-                <div class="th">Улица</div>
-                <div class="th">Дом</div>
-                <div class="th">Кор</div>
-                <div class="th">Этаж</div>
-                <div class="th">Мебель</div>
-                <div class="th">Хол</div>
-                <div class="th">С/м</div>
-                <div class="th">Тел</div>
-                <div class="th">ТВ</div>
-                <div class="th">Пред.</div>
-                <div class="th">Срок</div>
-                <div class="th">Примечание</div>
-                <div class="th">-</div>
-                <div class="th">-</div>
-                <div class="th">Змт</div>
-                <div class="th">Ответств.</div>
-                <div class="th">Телефоны</div>
-                <div class="th">Изменен</div>
-                <div class="th">Добавлен</div>
-                <div class="th">Статус</div>
-                <div class="th">-</div>
-                <div class="th">-</div>
-                <div class="th">-</div>
-                <div class="th">ID</div>-->
             </div>
         </div>
         <div class="tbody">
-            <div class="tr">
+            <div class="tr" data-ng-repeat="item in rooms">
                 <div class="td">
                     <div class="checkbox checkbox--empty checkbox--sm" role="menuitem">
-                        <input class="checkbox__input" type="checkbox" id="field-table-1" name="field-table-1">
-                        <label for="field-table-1" class="checkbox__label"></label>
+                        <input class="checkbox__input" type="checkbox" id="{{item.id}}" name="{{item.id}}">
+                        <label for="{{item.id}}" class="checkbox__label"></label>
                     </div>
                 </div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-            </div>
-            <div class="tr">
-                <div class="td">
-                    <div class="checkbox checkbox--empty checkbox--sm" role="menuitem">
-                        <input class="checkbox__input" type="checkbox" id="field-table-2" name="field-table-2">
-                        <label for="field-table-2" class="checkbox__label"></label>
-                    </div>
-                </div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
-                <div class="td">2</div>
+                <div class="td">{{item.price}}</div>
+                <div class="td">{{item.street}}</div>
+                <div class="td">№{{item.house_number}}</div>
+                <div class="td">{{item.room_number}}</div>
+                <div class="td">{{item.home_block}}</div>
+                <div class="td">{{item.floor}} из {{item.floor_max}}</div>
+                <div class="td">{{item.furniture}}</div>
+                <div class="td">{{item.refrigerator}}</div>
+                <div class="td">{{item.s_m}}</div>
+                <div class="td">{{item.cell}}</div>
             </div>
         </div>
     </div>

@@ -10,18 +10,36 @@
 
 .list {
     position: relative;
+    
     // -----------------------------------------
     // All modificators
     // -----------------------------------------
+    
     // Modificator '.list.list--h'
     &&--h {
+        
         // Element '.list.list--h .list__item'
         & .list__item {
             display: inline-block;
             vertical-align: top;
+        
             // Element '.list.list--h .list__item + .list__item'
             & + .list__item {
                 margin-left: 15px;
+            }
+        }
+    }
+
+    // Modificator '.list.list--v'
+    &&--v {
+
+        // Element '.list.list--h .list__item'
+        & .list__item {
+            display: block;
+        
+            // Element '.list.list--h .list__item + .list__item'
+            & + .list__item {
+                margin-top: 15px;
             }
         }
     }

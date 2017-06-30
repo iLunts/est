@@ -47,7 +47,7 @@
         text-align: left;
         font-weight: 400;
         font-size: 0.7rem;
-        text-transform: uppercase;
+        text-transform: capitalize;
         color: #78909c;
         vertical-align: middle;
     }
@@ -66,6 +66,11 @@
             background: #fff;
             box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
             border-radius: 3px;
+
+            // State '.table .tbody .tr.active'
+            // &.active{
+            //     background: @color-blue;
+            // }
 
             & + .tr{
                 margin-top: 4px;
