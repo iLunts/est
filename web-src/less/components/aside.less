@@ -28,9 +28,9 @@
 
     // Modificator '.aside.aside--rent'
     &&--rent{
-        padding-top: 10px;
+        padding-top: 14px;
     }
-    
+
     // Modificator '.aside.aside--sale'
     &&--sale{
         padding-top: 95px;
@@ -39,6 +39,34 @@
     // Modificator '.aside.aside--client'
     &&--client{
         padding-top: 105px;
+    }
+
+    // Modificator '.aside.aside--new'
+    &.aside--new{
+        
+        // Modificator '.aside.aside--new.aside--submenu'
+        &.aside--submenu{
+            background: @color-blue;
+
+            .aside__menu{
+
+                &-item,
+                &-text{
+                    color: #fff;
+                }
+
+                &-item{
+                    &:hover{
+                        background: #4fb1ff;
+                        border-color: transparent;
+                    }
+                }
+
+                &-icon{
+                    color: #77c3ff;
+                }
+            }
+        }
     }
 
     // Modificator '.aside.aside--submenu'

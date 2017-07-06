@@ -6,7 +6,10 @@
             </a>
         </div>-->
         <div class="aside__add t--c">
-            <a href="" class="btn btn--sm btn--blue">+</a>
+            <a href="" class="btn btn--sm btn--blue" data-ng-click="showNew = !showNew">
+                +
+                <!--<i class="icon icon-add"></i>-->
+            </a>
         </div>
 
         <div class="aside__menu">
@@ -89,6 +92,7 @@
         </div>
     </nav>
 
+    <div data-ng-class="{'open' : showNew}" data-ng-include="'view/ui/aside/new.html'"></div>
     <div data-ng-class="{'open' : showSettings}" data-ng-include="'view/ui/aside/settings.html'"></div>
     <div data-ng-class="{'open' : showRent}" data-ng-include="'view/ui/aside/rent.html'"></div>
     <div data-ng-class="{'open' : showSale}" data-ng-include="'view/ui/aside/sale.html'"></div>

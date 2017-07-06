@@ -19,10 +19,23 @@
     opacity: 0;
     // transition: visibility 300ms ~"ease-in-out";
     transition: opacity 200ms ~"ease-in-out" 200ms;
+    overflow: hidden;
 
     .open &{
         visibility: visible;
         opacity: 1;
+
+        &:after{
+            content: 'Estate';
+            position: absolute;
+            bottom: -7rem;
+            right: -5rem;
+            font-size: 25rem;
+            font-weight: 600;            
+            // color: #adadad;
+            color: #fff;
+            opacity: 0.075;
+        }
     }
 
     // -----------------------------------------
