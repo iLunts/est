@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="/content/css/components/checkbox.css">
     <link rel="stylesheet" type="text/css" href="/content/css/components/logo.css">
     <link rel="stylesheet" type="text/css" href="/content/css/components/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/components/overlay.css">
 
     <!--Plugins-->
     <!--<link rel="stylesheet" type="text/css" href="/bower_components/angular-bootstrap/ui-bootstrap-csp.css">-->
@@ -47,9 +48,10 @@
     <nav data-ng-include="'view/ui/top-menu/index.html'"></nav>
     
     <!--Aside menu-->
-    <aside data-ng-include="'view/ui/aside/index.html'"></aside>
-    <aside class="open1" data-ng-class="{'open' : showSettings}" data-ng-include="'view/ui/aside/submenu.html'"></aside>
+    <aside data-ng-controller="asideCtrl" data-ng-include="'view/ui/aside/index.html'"></aside>
 
+
+    <h1 data-ng-click="changeState(showSettings)">{{showSettings}}</h1>
     <!-- Main view -->
     <main class="main" data-ng-view></main>
 

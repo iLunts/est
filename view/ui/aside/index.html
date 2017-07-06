@@ -1,74 +1,96 @@
-<nav class="aside">
-    <!--<div class="aside__header">
-        <a href="" class="aside__header-link link link--reset">
-            <i class="icon icon-sort"></i>
-        </a>
-    </div>-->
-    <div class="aside__add t--c">
-        <a href="" class="btn btn--sm btn--blue">+</a>
-    </div>
+<div>
+    <nav class="aside">
+        <!--<div class="aside__header">
+            <a href="" class="aside__header-link link link--reset">
+                <i class="icon icon-sort"></i>
+            </a>
+        </div>-->
+        <div class="aside__add t--c">
+            <a href="" class="btn btn--sm btn--blue">+</a>
+        </div>
 
-    <div class="aside__menu">
-        <div class="aside__menu-item active">
-            <a href="#!/rent/flat" class="aside__menu-link">
-                <i class="aside__menu-icon icon-rent"></i>
-                <span class="aside__menu-text">Аренда</span>
-            </a>
+        <div class="aside__menu">
+            <div class="aside__menu-item aside__menu-item--parent active">
+                <a href="javascript:void(0);" class="aside__menu-link" data-ng-click="showRent = !showRent">
+                    <i class="aside__menu-icon icon-rent"></i>
+                    <span class="aside__menu-text">Аренда</span>
+                </a>
+                <!--<a href="#!/rent/flat" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-rent"></i>
+                    <span class="aside__menu-text">Аренда</span>
+                </a>-->
+                <!--<div class="aside__menu-submenu aside__menu-submenu--full">
+                    <a class="link link--reset" href="">
+                        <p class="title">Квартир</p>
+                    </a>
+                    <a class="link link--reset" href="">
+                        <p class="title">Коммерческая недвижимость</p>
+                    </a>
+                    <a class="link link--reset" href="">
+                        <p class="title">Коттеджи</p>
+                    </a>
+                </div>-->
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link" data-ng-click="showSale = !showSale">
+                    <i class="aside__menu-icon icon-house-rent-key"></i>
+                    <span class="aside__menu-text">Продажа</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link" data-ng-click="showClient = !showClient">
+                    <i class="aside__menu-icon icon-users"></i>
+                    <span class="aside__menu-text">Клиенты</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-city-hall"></i>
+                    <span class="aside__menu-text">БРТИ</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-reserved-table"></i>
+                    <!--<span class="aside__menu-text">Перегов...<br>Комнаты</span>-->
+                    <span class="aside__menu-text">Резервация</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-browser"></i>
+                    <span class="aside__menu-text">Администрирование</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-star"></i>
+                    <span class="aside__menu-text">Избранные</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-server"></i>
+                    <span class="aside__menu-text">Экспорт базы</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link">
+                    <i class="aside__menu-icon icon-cloud-download"></i>
+                    <span class="aside__menu-text">Обновления</span>
+                </a>
+            </div>
+            <div class="aside__menu-item">
+                <a href="" class="aside__menu-link" data-ng-click="showSettings = !showSettings">
+                    <i class="aside__menu-icon icon-settings"></i>
+                    <span class="aside__menu-text">Настройки</span>
+                </a>
+            </div>
         </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-house-rent-key"></i>
-                <span class="aside__menu-text">Продажа</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-users"></i>
-                <span class="aside__menu-text">Клиенты</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-city-hall"></i>
-                <span class="aside__menu-text">БРТИ</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-reserved-table"></i>
-                <!--<span class="aside__menu-text">Перегов...<br>Комнаты</span>-->
-                <span class="aside__menu-text">Резервация</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link" data-ng-model="showSettings" uib-btn-checkbox>
-                <i class="aside__menu-icon icon-settings"></i>
-                <span class="aside__menu-text">Настройки</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-browser"></i>
-                <span class="aside__menu-text">Администрирование</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-star"></i>
-                <span class="aside__menu-text">Избранные</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-server"></i>
-                <span class="aside__menu-text">Экспорт базы</span>
-            </a>
-        </div>
-        <div class="aside__menu-item">
-            <a href="" class="aside__menu-link">
-                <i class="aside__menu-icon icon-cloud-download"></i>
-                <span class="aside__menu-text">Обновления</span>
-            </a>
-        </div>
-    </div>
-</nav>
+    </nav>
+
+    <div data-ng-class="{'open' : showSettings}" data-ng-include="'view/ui/aside/settings.html'"></div>
+    <div data-ng-class="{'open' : showRent}" data-ng-include="'view/ui/aside/rent.html'"></div>
+    <div data-ng-class="{'open' : showSale}" data-ng-include="'view/ui/aside/sale.html'"></div>
+    <div data-ng-class="{'open' : showClient}" data-ng-include="'view/ui/aside/client.html'"></div>
+</div>
