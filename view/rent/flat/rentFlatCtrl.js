@@ -75,6 +75,8 @@ app.controller('rentFlatCtrl', function ($scope) {
 
     // $scope.metroStationOutput;
 
+    $scope.showDetails = false;
+
 
     $scope.params = [{
             name: 'Цена',

@@ -96,7 +96,7 @@
                 </span>
             </div>
         </div>
-        <div class="tr" data-ng-repeat="item in rooms">
+        <div class="tr" data-ng-repeat="item in rooms" data-ng-click="showDetails = !showDetails">
             <div class="td t--c">
                 <div class="checkbox checkbox--empty checkbox--sm" role="menuitem">
                     <input class="checkbox__input" type="checkbox" id="{{item.id}}" name="{{item.id}}">
