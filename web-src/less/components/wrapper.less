@@ -21,7 +21,7 @@
     opacity: 0;
     visibility: hidden;
 
-    .open&{
+    .open &{
         // display: block;
         opacity: 1;
         visibility: visible;
@@ -35,6 +35,25 @@
     // -----------------------------------------
     // All elements
     // -----------------------------------------
+
+    // Element '.wrapper .grid + .grid'
+    .grid + .grid{
+        margin-top: 20px;
+    }
+
+    // Element '.wrapper .wrapper__close'
+    & &__close{
+        // position: absolute;
+        // right: 12px;
+        // top: 6px;
+        font-size: 2rem !important;
+        line-height: 1;
+
+        .icon{
+            border-left: 1px solid #ddd;
+            padding-left: 10px;
+        }
+    }
 
     // Element '.wrapper .wrapper__container'
     & &__container{
@@ -52,7 +71,7 @@
     & &__header{
         min-height: 50px;
         line-height: 50px;
-        padding: 0 40px;
+        padding: 0 15px;
 
         &.sticky{
             position: absolute;
@@ -61,6 +80,17 @@
             right: 0;
             background-color: #fff;
             box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+        }
+
+        &-action{
+            text-align: right;
+
+            & > *{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 20px;
+                font-size: 1.2rem;
+            }
         }
     }
 

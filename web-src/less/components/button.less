@@ -38,7 +38,7 @@
     background: @btn-background;
     vertical-align: middle;
     line-height: @btn-line-height;
-    min-height: @btn-height;
+    height: @btn-height;
     font-size: @btn-font-size;
     text-decoration: none;
     text-align: center;
@@ -58,7 +58,7 @@
 
     // Modificator '.btn.btn--mini'
     &&--mini {
-        min-height: @btn-mini-height;
+        height: @btn-mini-height;
         padding: 0 @btn-mini-padding-horizontal;
         line-height: @btn-mini-line-height;
         font-size: @btn-mini-font-size;
@@ -66,18 +66,26 @@
 
     // Modificator '.btn.btn--sm'
     &&--sm {
-        min-height: @btn-small-height;
-        padding: 0 @btn-small-padding-horizontal;
-        line-height: @btn-small-line-height;
-        font-size: @btn-small-font-size;
+        height: @btn-sm-height;
+        padding: 0 @btn-sm-padding-horizontal;
+        line-height: @btn-sm-line-height;
+        font-size: @btn-sm-font-size;
+    }
+
+    // Modificator '.btn.btn--md'
+    &&--md {
+        height: @btn-md-height;
+        padding: 0 @btn-md-padding-horizontal;
+        line-height: @btn-md-line-height;
+        font-size: @btn-md-font-size;
     }
 
     // Modificator '.btn.btn--lg'
     &&--lg {
-        min-height: @btn-height-large;
-        padding: 0 @btn-padding-horizontal-large;
-        line-height: @btn-line-height-large;
-        font-size: @btn-font-size-large;
+        height: @btn-lg-height;
+        padding: 0 @btn-lg-padding-horizontal;
+        line-height: @btn-lg-line-height;
+        font-size: @btn-lg-font-size;
     }
 
     // Modificator '.btn.btn--success'
@@ -100,6 +108,29 @@
         &:active {
             background-color: @btn-success-active-background;
             color: @btn-success-active-color;
+        }
+    }
+
+    // Modificator '.btn.btn--yellow'
+    &&--yellow {
+        background-color: @btn-yellow-background;
+        color: @btn-yellow-color ;
+
+        // Action '.btn.btn--success:focus'
+        // Action '.btn.btn--success:hover'
+        &:focus,
+        &:hover {
+            background-color: @btn-yellow-hover-background;
+            color: @btn-yellow-hover-color;
+            // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        // State '.btn.btn--success.active'
+        // State '.btn.btn--success:active'
+        &.active,
+        &:active {
+            background-color: @btn-yellow-active-background;
+            color: @btn-yellow-active-color;
         }
     }
 

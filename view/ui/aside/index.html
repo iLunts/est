@@ -13,7 +13,7 @@
         </div>
 
         <div class="aside__menu">
-            <div class="aside__menu-item aside__menu-item--parent active">
+            <div class="aside__menu-item aside__menu-item--parent active" data-ng-class="{'hover' : showRent}">
                 <a href="javascript:void(0);" class="aside__menu-link" data-ng-click="showRent = !showRent">
                     <i class="aside__menu-icon icon-rent"></i>
                     <span class="aside__menu-text">Аренда</span>
@@ -34,13 +34,13 @@
                     </a>
                 </div>-->
             </div>
-            <div class="aside__menu-item">
+            <div class="aside__menu-item" data-ng-class="{'hover' : showSale}">
                 <a href="" class="aside__menu-link" data-ng-click="showSale = !showSale">
                     <i class="aside__menu-icon icon-house-rent-key"></i>
                     <span class="aside__menu-text">Продажа</span>
                 </a>
             </div>
-            <div class="aside__menu-item">
+            <div class="aside__menu-item" data-ng-class="{'hover' : showClient}">
                 <a href="" class="aside__menu-link" data-ng-click="showClient = !showClient">
                     <i class="aside__menu-icon icon-users"></i>
                     <span class="aside__menu-text">Клиенты</span>

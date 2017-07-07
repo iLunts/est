@@ -1,0 +1,60 @@
+// out: ../../../content/css/components/spec.css, compress: true
+@import 'variables.less';
+// Name:            spec
+// Description:     Defines styles to create layouts with spec
+//
+//
+// Component:       `.spec__*`
+// ----------------------------------------------------
+// Block '.spec'
+// ----------------------------------------------------
+.spec {
+    
+    // -----------------------------------------
+    // All modificators
+    // -----------------------------------------
+
+
+    // -----------------------------------------
+    // All elements
+    // -----------------------------------------
+
+    // Element '.spec .spec__group'
+    & &__group{
+        // border-bottom: 1px solid #ddd;
+    }
+
+    // Element '.spec .spec__item'
+    & &__row{
+        position: relative;
+        overflow: hidden;
+
+        &:before{
+            content: '........................................................................................................';
+            position: absolute;
+            bottom: 0;
+            font-size: 5px;
+            padding-left: 4px;
+            letter-spacing: 3px;
+        }
+
+        .spec__text{
+            background: #fff;
+            padding: 0 10px;
+            z-index: 1;
+        }
+    }
+
+    // Element '.spec .spec__item'
+    & &__item{
+
+        &.spec__item--left{
+        
+        }
+
+        &.spec__item--right{
+            float: right;
+        }
+    }
+
+}
