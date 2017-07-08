@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var path = require('path');
-var cleanCSS = require('gulp-clean-css');
+// var cleanCSS = require('gulp-clean-css');
 var clean = require('gulp-clean');
 
 var concatCss = require('gulp-concat-css');
@@ -22,7 +22,7 @@ gulp.task('scripts', function() {
 gulp.task('minify-css', ['clean-style'], function() {
     return gulp.src('content/css/**/*.css')
         .pipe(concatCss('style.min.css'))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('content/css/min'));
 });
 
