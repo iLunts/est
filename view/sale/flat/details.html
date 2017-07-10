@@ -98,12 +98,18 @@
 
                 <div class="grid grid--collapse room__grid-border">
                     <div class="col--3-4">
-                        <div class="room__slider">
-                            <div class="room__slider-item">
-                                <div class="room__slider-img" style="background-image: url('/content/img/sale/flat/1.jpg')"></div>
-                                <!--<img src="/content/img/sale/flat/1.jpg" alt="">-->
-                            </div>
-                        </div>
+                        <!--<div class="room__slider">-->
+                            <!--<div class="room__slider-item">-->
+
+                                <slick class="room__slider" dots="true" infinite="true" speed="300" slides-to-show="1" touch-move="false" slides-to-scroll="1">
+                                    <div class="room__slider-item slick-item" data-ng-repeat="item in apartments">
+                                        <!--<img class="room__slider-img" src="{{ item.url }}" />-->
+                                        <div class="room__slider-img" style="background-image: url({{ item.url }})" />
+                                    </div>
+                                </slick>
+
+                            <!--</div>-->
+                        <!--</div>-->
                     </div>
                     <div class="col--1-4">
                         <div class="panorama">

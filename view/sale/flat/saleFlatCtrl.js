@@ -21,6 +21,24 @@ app.controller('saleFlatCtrl', function ($scope) {
         $scope.showDetails = false;
     }
 
+    $scope.apartments = [
+        {
+            url: '/content/img/sale/flat/1.jpg'
+        },
+        {
+            url: '/content/img/sale/flat/1.jpg'
+        },
+        {
+            url: '/content/img/sale/flat/1.jpg'
+        },
+        {
+            url: '/content/img/sale/flat/1.jpg'
+        },
+        {
+            url: '/content/img/sale/flat/1.jpg'
+        }
+    ];
+
 
     $scope.params = [{
             name: 'Цена',
