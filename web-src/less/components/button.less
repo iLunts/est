@@ -116,8 +116,8 @@
         background-color: @btn-yellow-background;
         color: @btn-yellow-color ;
 
-        // Action '.btn.btn--success:focus'
-        // Action '.btn.btn--success:hover'
+        // Action '.btn.btn--yellow:focus'
+        // Action '.btn.btn--yellow:hover'
         &:focus,
         &:hover {
             background-color: @btn-yellow-hover-background;
@@ -125,12 +125,58 @@
             // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
         }
 
-        // State '.btn.btn--success.active'
-        // State '.btn.btn--success:active'
+        // State '.btn.btn--yellow.active'
+        // State '.btn.btn--yellow:active'
         &.active,
         &:active {
             background-color: @btn-yellow-active-background;
             color: @btn-yellow-active-color;
+        }
+    }
+
+    // Modificator '.btn.btn--red'
+    &&--red {
+        background-color: @btn-red-background;
+        color: @btn-red-color ;
+
+        // Action '.btn.btn--red:focus'
+        // Action '.btn.btn--red:hover'
+        &:focus,
+        &:hover {
+            background-color: @btn-red-hover-background;
+            color: @btn-red-hover-color;
+            // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        // State '.btn.btn--red.active'
+        // State '.btn.btn--red:active'
+        &.active,
+        &:active {
+            background-color: @btn-red-active-background;
+            color: @btn-red-active-color;
+        }
+    }
+
+    // Modificator '.btn.btn--gray'
+    &&--gray {
+        background-color: @btn-gray-background;
+        color: @btn-gray-color ;
+
+        // Action '.btn.btn--gray:focus'
+        // Action '.btn.btn--gray:hover'
+        &:focus,
+        &:hover {
+            background-color: @btn-gray-hover-background;
+            color: @btn-gray-hover-color;
+            // text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+        }
+
+        // State '.btn.btn--gray.active'
+        // State '.btn.btn--gray:active'
+        &.active,
+        &:active {
+            background-color: @btn-gray-active-background;
+            color: @btn-gray-active-color;
         }
     }
 

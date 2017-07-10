@@ -50,10 +50,19 @@
 
     // Element '.spec .spec__text'
     & &__text{
+        vertical-align: middle;
         
         &-icon{
-            font-size: 1.3rem;
+            font-size: 0.9rem;
             color: #bbb;
+            padding: 5px;
+            border-radius: 60px;
+            background: rgba(187, 187, 187, 0.1);
+
+            &.spec__text-icon--check{
+                color: @color-green;
+                background: rgba(0, 166, 81, 0.1);
+            }
         }
     }
 
@@ -66,10 +75,13 @@
 
         &.spec__item--left{
             float: left;
+            padding-left: 0;
         }
 
         &.spec__item--right{
             float: right;
+            min-width: 50px;
+            text-align: center;
 
             .spec__text{
                 font-weight: 700;

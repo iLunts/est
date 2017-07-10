@@ -16,6 +16,10 @@ app.controller('saleFlatCtrl', function ($scope) {
     $scope.openDetails = function(){
         $scope.showDetails = true;
     }
+    
+    $scope.closeDetails = function(){
+        $scope.showDetails = false;
+    }
 
 
     $scope.params = [{

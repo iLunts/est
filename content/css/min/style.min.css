@@ -399,6 +399,40 @@
   color: #333;
 }
 
+.btn.btn--red {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn.btn--red:focus,
+.btn.btn--red:hover {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.btn.btn--red.active,
+.btn.btn--red:active {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.btn.btn--gray {
+  background-color: #eee;
+  color: #333;
+}
+
+.btn.btn--gray:focus,
+.btn.btn--gray:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn.btn--gray.active,
+.btn.btn--gray:active {
+  background-color: #ddd;
+  color: #333;
+}
+
 .btn.btn--primary {
   background-color: #e7f3ff;
   color: #188bf5;
@@ -1746,8 +1780,8 @@ a:hover {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?mtip99");
-  src: url("../fonts/icomoon.eot?mtip99#iefix") format('embedded-opentype'),url("../fonts/icomoon.ttf?mtip99") format('truetype'),url("../fonts/icomoon.woff?mtip99") format('woff'),url("../fonts/icomoon.svg?mtip99#icomoon") format('svg');
+  src: url("../fonts/icomoon.eot?oitqu5");
+  src: url("../fonts/icomoon.eot?oitqu5#iefix") format('embedded-opentype'),url("../fonts/icomoon.ttf?oitqu5") format('truetype'),url("../fonts/icomoon.woff?oitqu5") format('woff'),url("../fonts/icomoon.svg?oitqu5#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1763,6 +1797,198 @@ a:hover {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-smartphone-check:before {
+  content: "\e932";
+}
+
+.icon-smartphone-search:before {
+  content: "\e933";
+}
+
+.icon-smartphone-settings:before {
+  content: "\e934";
+}
+
+.icon-bookmark-line:before {
+  content: "\e905";
+}
+
+.icon-panorama:before {
+  content: "\e931";
+}
+
+.icon-browser:before {
+  content: "\e926";
+}
+
+.icon-server:before {
+  content: "\e927";
+}
+
+.icon-system-controller:before {
+  content: "\e928";
+}
+
+.icon-speech-bubble:before {
+  content: "\e929";
+}
+
+.icon-star:before {
+  content: "\e92a";
+}
+
+.icon-star-fill:before {
+  content: "\e92b";
+}
+
+.icon-users:before {
+  content: "\e925";
+}
+
+.icon-cloud-download:before {
+  content: "\e900";
+}
+
+.icon-bathtub:before {
+  content: "\e901";
+}
+
+.icon-blueprint-paper:before {
+  content: "\e902";
+}
+
+.icon-blueprint-(2):before {
+  content: "\e903";
+}
+
+.icon-blueprint:before {
+  content: "\e904";
+}
+
+.icon-bookmark-fill:before {
+  content: "\e906";
+}
+
+.icon-building-key:before {
+  content: "\e907";
+}
+
+.icon-building:before {
+  content: "\e908";
+}
+
+.icon-city-hall-1:before {
+  content: "\e909";
+}
+
+.icon-city-hall:before {
+  content: "\e90a";
+}
+
+.icon-contract:before {
+  content: "\e90b";
+}
+
+.icon-engineer:before {
+  content: "\e90c";
+}
+
+.icon-for-sale:before {
+  content: "\e90d";
+}
+
+.icon-garage:before {
+  content: "\e90e";
+}
+
+.icon-house-rent-key:before {
+  content: "\e90f";
+}
+
+.icon-house-money:before {
+  content: "\e910";
+}
+
+.icon-house-double:before {
+  content: "\e911";
+}
+
+.icon-house-wall:before {
+  content: "\e912";
+}
+
+.icon-house-garage:before {
+  content: "\e913";
+}
+
+.icon-house-lock:before {
+  content: "\e914";
+}
+
+.icon-house-paper:before {
+  content: "\e915";
+}
+
+.icon-house:before {
+  content: "\e916";
+}
+
+.icon-house-key:before {
+  content: "\e917";
+}
+
+.icon-hand-key:before {
+  content: "\e918";
+}
+
+.icon-lift:before {
+  content: "\e919";
+}
+
+.icon-hand-mortgage:before {
+  content: "\e91a";
+}
+
+.icon-mortgage-pen:before {
+  content: "\e91b";
+}
+
+.icon-mortgage:before {
+  content: "\e91c";
+}
+
+.icon-real-estate:before {
+  content: "\e91d";
+}
+
+.icon-rent:before {
+  content: "\e91e";
+}
+
+.icon-reserved:before {
+  content: "\e91f";
+}
+
+.icon-reserved-table:before {
+  content: "\e920";
+}
+
+.icon-search-house:before {
+  content: "\e921";
+}
+
+.icon-settings:before {
+  content: "\e922";
+}
+
+.icon-skyscrapper:before {
+  content: "\e923";
+}
+
+.icon-son:before {
+  content: "\e924";
 }
 
 .icon-favorite:before {
@@ -2205,186 +2431,6 @@ a:hover {
 .icon-remove:before {
   content: "\e15b";
 }
-
-.icon-bookmark-line:before {
-  content: "\e905";
-}
-
-.icon-panorama:before {
-  content: "\e931";
-}
-
-.icon-browser:before {
-  content: "\e926";
-}
-
-.icon-server:before {
-  content: "\e927";
-}
-
-.icon-system-controller:before {
-  content: "\e928";
-}
-
-.icon-speech-bubble:before {
-  content: "\e929";
-}
-
-.icon-star:before {
-  content: "\e92a";
-}
-
-.icon-star-fill:before {
-  content: "\e92b";
-}
-
-.icon-users:before {
-  content: "\e925";
-}
-
-.icon-cloud-download:before {
-  content: "\e900";
-}
-
-.icon-bathtub:before {
-  content: "\e901";
-}
-
-.icon-blueprint-paper:before {
-  content: "\e902";
-}
-
-.icon-blueprint-(2):before {
-  content: "\e903";
-}
-
-.icon-blueprint:before {
-  content: "\e904";
-}
-
-.icon-bookmark-fill:before {
-  content: "\e906";
-}
-
-.icon-building-key:before {
-  content: "\e907";
-}
-
-.icon-building:before {
-  content: "\e908";
-}
-
-.icon-city-hall-1:before {
-  content: "\e909";
-}
-
-.icon-city-hall:before {
-  content: "\e90a";
-}
-
-.icon-contract:before {
-  content: "\e90b";
-}
-
-.icon-engineer:before {
-  content: "\e90c";
-}
-
-.icon-for-sale:before {
-  content: "\e90d";
-}
-
-.icon-garage:before {
-  content: "\e90e";
-}
-
-.icon-house-rent-key:before {
-  content: "\e90f";
-}
-
-.icon-house-money:before {
-  content: "\e910";
-}
-
-.icon-house-double:before {
-  content: "\e911";
-}
-
-.icon-house-wall:before {
-  content: "\e912";
-}
-
-.icon-house-garage:before {
-  content: "\e913";
-}
-
-.icon-house-lock:before {
-  content: "\e914";
-}
-
-.icon-house-paper:before {
-  content: "\e915";
-}
-
-.icon-house:before {
-  content: "\e916";
-}
-
-.icon-house-key:before {
-  content: "\e917";
-}
-
-.icon-hand-key:before {
-  content: "\e918";
-}
-
-.icon-lift:before {
-  content: "\e919";
-}
-
-.icon-hand-mortgage:before {
-  content: "\e91a";
-}
-
-.icon-mortgage-pen:before {
-  content: "\e91b";
-}
-
-.icon-mortgage:before {
-  content: "\e91c";
-}
-
-.icon-real-estate:before {
-  content: "\e91d";
-}
-
-.icon-rent:before {
-  content: "\e91e";
-}
-
-.icon-reserved:before {
-  content: "\e91f";
-}
-
-.icon-reserved-table:before {
-  content: "\e920";
-}
-
-.icon-search-house:before {
-  content: "\e921";
-}
-
-.icon-settings:before {
-  content: "\e922";
-}
-
-.icon-skyscrapper:before {
-  content: "\e923";
-}
-
-.icon-son:before {
-  content: "\e924";
-}
 .input {
   position: relative;
   width: 100%;
@@ -2620,7 +2666,7 @@ p {
 .main {
   margin-left: 64px;
   height: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .metro {
   position: relative;
@@ -3318,9 +3364,21 @@ img {
   line-height: 16px;
 }
 
+.spec .spec__text {
+  vertical-align: middle;
+}
+
 .spec .spec__text-icon {
-  font-size: 1.3rem;
+  font-size: .9rem;
   color: #bbb;
+  padding: 5px;
+  border-radius: 60px;
+  background: rgba(187,187,187,0.1);
+}
+
+.spec .spec__text-icon.spec__text-icon--check {
+  color: #00a651;
+  background: rgba(0,166,81,0.1);
 }
 
 .spec .spec__item {
@@ -3332,10 +3390,13 @@ img {
 
 .spec .spec__item.spec__item--left {
   float: left;
+  padding-left: 0;
 }
 
 .spec .spec__item.spec__item--right {
   float: right;
+  min-width: 50px;
+  text-align: center;
 }
 
 .spec .spec__item.spec__item--right .spec__text {
@@ -3723,6 +3784,18 @@ img {
   margin-top: -20px !important;
 }
 
+.m--l {
+  margin: 0 0 0 20px !important;
+}
+
+.m--l-sm {
+  margin: 0 0 0 10px !important;
+}
+
+.m--l-mini {
+  margin: 0 0 0 5px !important;
+}
+
 .m--r {
   margin: 0 20px 0 0 !important;
 }
@@ -3843,7 +3916,7 @@ blockquote {
 
 .wrapper .wrapper__container {
   position: fixed;
-  top: 40px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -3856,15 +3929,13 @@ blockquote {
   min-height: 50px;
   line-height: 50px;
   padding: 0 15px;
+  position: relative;
+  transition: all 300ms ease-in-out;
 }
 
-.wrapper .wrapper__header.sticky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
+.wrapper .wrapper__header.is-sticky {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+  background-color: #fff;
 }
 
 .wrapper .wrapper__header-action {
@@ -3879,7 +3950,8 @@ blockquote {
 }
 
 .wrapper .wrapper__content {
-  padding: 60px 40px 20px 40px;
+  padding: 20px 40px 20px 40px;
+  margin-top: -52px;
 }
 
 .wrapper .wrapper__panel {
