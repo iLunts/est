@@ -2653,7 +2653,7 @@ html {
 
 body {
   background: #f3f5f7;
-  background-image: url("../../content/svg/city-back.svg");
+  background-image: url("/content/svg/city-back.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   padding-top: 40px;
@@ -3145,7 +3145,7 @@ p {
   position: relative;
   display: block;
   padding: 22px 0;
-  background: url("../../content/img/maps-panorama.png");
+  background: url("/content/img/maps-panorama.png");
   background-repeat: no-repeat;
   text-align: center;
 }
